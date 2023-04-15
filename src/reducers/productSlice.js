@@ -5,7 +5,7 @@ export const fetchProducts = createAsyncThunk(
     "products/fetchProducts",
     async() => {
         try {
-            const response = await axios.get("http://localhost:9000/products");
+            const response = await axios.get("http://localhost:9000/stickers");
             return response.data;
         } catch (err) {
             console.log(err.message);
