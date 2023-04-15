@@ -1,5 +1,15 @@
+import {Helmet} from 'react-helmet';
+
+import MainLayout from "./components/layouts/MainLayout";
+
 const App = () => {
-  return <h1 className="text-3xl font-bold underline text-red-500 text-center mt-12">Hello world!</h1>;
+  return (
+    <MainLayout>
+      <Helmet>
+        <title>فروشگاه استیکر برنامه نویسی</title>
+      </Helmet>
+    </MainLayout>
+  );
 };
 
 export default App;

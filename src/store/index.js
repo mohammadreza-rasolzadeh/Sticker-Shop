@@ -1,12 +1,12 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 
-import productReducer, { fetchProducts } from "../reducers/productSlice";
-import { productApi } from "../reducers/productApi";
+import productsReducer, { fetchProducts } from "../reducers/productSlice";
 import cartReducer, { getTotals } from "../reducers/cartSlice";
+import { productApi } from "../reducers/productApi";
 
 export const store = configureStore({
     reducer: {
-        products: productReducer,
+        products: productsReducer,
         cart: cartReducer,
         [productApi.reducerPath]: productApi.reducer,
     },
@@ -15,4 +15,4 @@ export const store = configureStore({
 });
 
 store.dispatch(fetchProducts());
-store.dispatch(getTotals())
+store.dispatch(getTotals());
