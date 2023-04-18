@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CustomNumeralNumericFormat from "../Price";
 
 const Navbar = () => {
   return (
@@ -31,11 +32,10 @@ const Navbar = () => {
 
             {/* {cartItems.length === 0 ? null : ( */}
             <div className="absolute top-0 right-0 text-xs bg-yellow-300 text-gray-900 font-semibold rounded-full py-1 px-2 transform translate-x-7 -translate-y-3">
-              {/* <CustomNumeralNumericFormat
-                                    value={cartItems.length}
+              <CustomNumeralNumericFormat
+                                    value={10}
                                     thousandSeparator=","
-                                /> */}
-              10
+                                />
             </div>
             {/* )} */}
           </Link>
