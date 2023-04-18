@@ -8,6 +8,7 @@ import App from "./App";
 import "./index.css";
 import NotFound from "./components/NotFound";
 import MainLayout from "./components/layouts/MainLayout";
+import ProductDetails from "./components/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,14 +16,14 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFound />,
   },
-  // {
-  //   path: "/products/:productId",
-  //   element: (
-  //     <MainLayout>
-  //       <ProductDetails />
-  //     </MainLayout>
-  //   ),
-  // },
+  {
+    path: "/products/:productId",
+    element: (
+      <MainLayout>
+        <ProductDetails />
+      </MainLayout>
+    ),
+  },
   // {
   //   path: "/cart",
   //   element: (
